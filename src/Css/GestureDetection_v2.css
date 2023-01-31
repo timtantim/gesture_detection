@@ -1,18 +1,18 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700");
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
 
-.gesture * {
+.gesture_v2 * {
   margin: 0;
   border: 0;
   box-sizing: border-box;
 }
 
-.gesture :root {
+.gesture_v2 :root {
   --font-roboto: "Roboto Slab", serif;
   --font-raleway: "Raleway", sans-serif;
 }
 
-.gesture{
+.gesture_v2{
   font-family: var(--font-roboto);
   background-color: #212426;
 }
@@ -21,7 +21,7 @@
   background-color: #212426;
 } */
 
-.gesture .app {
+.gesture_v2 .app {
   padding: 4rem;
 
   display: flex;
@@ -31,7 +31,7 @@
     /* max-height:"100vh"; */
 }
 
-.gesture h1 {
+.gesture_v2 h1 {
   font-size: 3rem;
   letter-spacing: 0.9px;
   background: linear-gradient(
@@ -45,7 +45,7 @@
   width: fit-content;
 }
 
-.gesture .search {
+.gesture_v2 .search {
   width: 71%;
   margin: 4rem 0 2rem;
 
@@ -60,7 +60,7 @@
   box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
 }
 
-.gesture .search input {
+.gesture_v2 .search input {
   flex: 1;
   border: none;
   font-size: 1.5rem;
@@ -73,12 +73,12 @@
   background: #1f2123;
 }
 
-.gesture .search img {
+.gesture_v2 .search img {
   width: 35px;
   height: 35px;
   cursor: pointer;
 }
-.gesture .empty {
+.gesture_v2 .empty {
   width: 100%;
   margin-top: 3rem;
 
@@ -87,13 +87,13 @@
   align-items: center;
 }
 
-.gesture .empty h2 {
+.gesture_v2 .empty h2 {
   font-size: 1.25rem;
   color: #f9d3b4;
   font-family: var(--font-raleway);
 }
 
-.gesture .container {
+.gesture_v2 .container {
   width: 100%;
   margin-top: 3rem;
 
@@ -106,9 +106,9 @@
   /* overflow-y:"scroll"; */
 }
 
-.gesture .movie {
-  width: 400;
-  height: 288px;
+.gesture_v2 .movie {
+  width: 640;
+  height: 480px;
   margin: 1.5rem;
 
   position: relative;
@@ -120,7 +120,7 @@
   box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
 }
 
-.gesture .movie div:nth-of-type(1) {
+.gesture_v2 .movie div:nth-of-type(1) {
   position: absolute;
   padding: 16px;
   width: 100%;
@@ -129,22 +129,22 @@
   color: #f9d3b4;
 }
 
-.gesture .movie:hover {
+.gesture_v2 .movie:hover {
   box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
   transform: scale(1.05, 1.05);
 }
 
-.gesture .movie div:nth-of-type(2) {
+.gesture_v2 .movie div:nth-of-type(2) {
   width: 100%;
   height: 100%;
 }
 
-.gesture .movie div:nth-of-type(2) img {
+.gesture_v2 .movie div:nth-of-type(2) img {
   height: 100%;
   width: 100%;
 }
 
-.gesture .movie div:nth-of-type(3) {
+.gesture_v2 .movie div:nth-of-type(3) {
   z-index: 2;
   background-color: #343739;
   padding: 16px 24px 24px 24px;
@@ -155,7 +155,7 @@
   left: 0;
 }
 
-.gesture .movie div:nth-of-type(3) span {
+.gesture_v2 .movie div:nth-of-type(3) span {
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
   font-size: 13px;
@@ -164,59 +164,59 @@
   color: #f0f0f0;
 }
 
-.gesture .movie div:nth-of-type(3) h3 {
+.gesture_v2 .movie div:nth-of-type(3) h3 {
   margin-top: 5px;
   font-family: "Roboto Slab", serif;
   color: #f9d3b4;
 }
 
-.gesture .movie:hover div:nth-of-type(2) {
+.gesture_v2 .movie:hover div:nth-of-type(2) {
   height: 100%;
   opacity: 0.3;
 }
 
-.gesture .movie:hover div:nth-of-type(3) {
+.gesture_v2 .movie:hover div:nth-of-type(3) {
   background-color: transparent;
 }
 
-.gesture .movie:hover div:nth-of-type(1) {
+.gesture_v2 .movie:hover div:nth-of-type(1) {
   opacity: 1;
 }
 
 @media screen and (max-width: 600px) {
-  .gesture .app {
+  .gesture_v2 .app {
     padding: 4rem 2rem;
   }
 
-  .gesture .search {
+  .gesture_v2 .search {
     padding: 1rem 1.75rem;
     width: 100%;
   }
 
-  .gesture .search input {
+  .gesture_v2 .search input {
     font-size: 1rem;
   }
 
-  .gesture .search img {
+  .gesture_v2 .search img {
     width: 20px;
     height: 20px;
   }
 }
 
 @media screen and (max-width: 400px) {
-  .gesture .app {
+  .gesture_v2 .app {
     padding: 4rem 1rem;
   }
 
-  .gesture h1 {
+  .gesture_v2 h1 {
     font-size: 2rem;
   }
 
-  .gesture .container {
+  .gesture_v2 .container {
     margin-top: 2rem;
   }
 
-  .gesture .movie {
+  .gesture_v2 .movie {
     width: "100%";
     margin: 1rem;
   }

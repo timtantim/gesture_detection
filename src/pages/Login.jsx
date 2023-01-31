@@ -4,7 +4,7 @@ import TextField from '@mui/material/TextField';
 import Container from '@mui/material/Container';
 import {Navigate} from 'react-router-dom';
 import Grid from '@mui/material/Grid';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import { useEffect,useState } from 'react';
 import {useSelector,useDispatch} from 'react-redux';
 import {
@@ -121,34 +121,11 @@ function Login() {
                         </Button>
                     </Grid>
                 </Grid>
-                {/* <ToastContainer /> */}
                 </>
             ):(<><Navigate to="/gestureDetection" replace /></>)
         
         
-        /*<>
-         <Grid
-            container
-            spacing={3}
-            direction="column"
-            alignItems="center"
-            justifyContent="center"
-            style={{ minHeight: '100vh' }}
-        >
-            <Grid item xs={6}>
-                <TextField id="account" value={account} label="Account" onChange={handleAccountChange} variant="standard" />
-            </Grid>
-            <Grid item xs={6}>
-                <TextField id="password" value={password} label="Password" onChange={handlePasswordChange} variant="standard" type="password"/>
-            </Grid>
-            <Grid item xs={6} mt={6}>
-                <Button variant="outlined" onClick={loginClick} size="large">
-                    Login
-                </Button>
-            </Grid>
-        </Grid>
-        <ToastContainer /> 
-        </>*/
+       
     
   )
 }

@@ -22,9 +22,14 @@ import {
     AuthIcon,
     WizardIcon,
     ModalIcon,
-    LoginIcon
+    LoginIcon,
+    HistoryIcon,
+    StreamIcon
   } from "../../Icons/Sidebar/Icons";
 import GestureDetection from "../../pages/GestureDetection";
+import GestureDetectionRecord from "../../pages/GestureDetectionRecord";
+import LiveStream from "../../pages/LiveStream";
+import FlvLiveStream from "../../pages/FlvLiveStream";
 import Login from "../../pages/Login";
 import Logout from "../../pages/Logout";
   
@@ -38,7 +43,31 @@ import Logout from "../../pages/Logout";
         private:true
     },
     {
-        id: 2,
+      id: 2,
+      name: "Gesture Detection Record",
+      path: "gestureDetectionRecord",
+      icon: <HistoryIcon />,
+      element: <GestureDetectionRecord/>,
+      private:true
+    },
+    {
+      id: 3,
+      name: "Live Stream",
+      path: "liveStream",
+      icon: <StreamIcon />,
+      element: <LiveStream/>,
+      private:true
+    },
+    {
+      id: 4,
+      name: "Flv Live Stream",
+      path: "FlvliveStream",
+      icon: <StreamIcon />,
+      element: <FlvLiveStream/>,
+      private:true
+    },
+    {
+        id: 5,
         name: "Login",
         path: "login",
         icon: <LoginIcon />,
@@ -46,7 +75,7 @@ import Logout from "../../pages/Logout";
         private:false
     },
     {
-        id: 3,
+        id: 6,
         name: "Logout",
         path: "logout",
         icon: <LogoutIcon />,

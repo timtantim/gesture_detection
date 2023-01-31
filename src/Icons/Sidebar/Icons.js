@@ -11,6 +11,9 @@ import AdminPanelSettingsOutlinedIcon from "@mui/icons-material/AdminPanelSettin
 import ListAltOutlinedIcon from "@mui/icons-material/ListAltOutlined";
 import InputOutlinedIcon from "@mui/icons-material/InputOutlined";
 import LogoutIcon from '@mui/icons-material/Logout';
+import HistoryIcon from '@mui/icons-material/History';
+import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
+import StreamIcon from '@mui/icons-material/Stream';
 
 import ArrowRightOutlinedIcon from "@mui/icons-material/ArrowRightOutlined";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
@@ -29,5 +32,8 @@ export {
   ArrowBackIcon,
   ArrowRightOutlinedIcon as ArrowIcon,
   LoginIcon as LoginIcon,
-  LogoutIcon as LogoutIcon
+  LogoutIcon as LogoutIcon,
+  HistoryIcon as HistoryIcon,
+  DeleteForeverIcon as DeleteForeverIcon,
+  StreamIcon as StreamIcon
 };

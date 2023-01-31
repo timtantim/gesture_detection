@@ -62,12 +62,12 @@ import {
             if(obj.status=='200'){
                 let current_datetime=new Date();
                 current_datetime=current_datetime.setSeconds(current_datetime.getSeconds() + parseInt(obj.body.expires_in));
-                localStorage.setItem('access_token',obj.body.access_token);
+                // localStorage.setItem('access_token',obj.body.access_token);
                 localStorage.setItem("refresh_token", obj.body.refresh_token);
-                localStorage.setItem("token_type", obj.body.token_type);
-                localStorage.setItem("expires_in", obj.body.expires_in);
+                // localStorage.setItem("token_type", obj.body.token_type);
+                // localStorage.setItem("expires_in", obj.body.expires_in);
                 localStorage.setItem("user_account", obj.body.user_account);
-                localStorage.setItem("expires_time", new Date(current_datetime));
+                // localStorage.setItem("expires_time", new Date(current_datetime));
 
                 dispatch(setExpiresIn(obj.body.expires_in));
                 dispatch(setExpireTime(new Date(current_datetime).toString()));
@@ -119,7 +119,6 @@ import {
       
         
         if(access_token){
-       
             VerifyToken(access_token).then(function(result) {
                 setApiReturnStatus(true)
             //  return children;

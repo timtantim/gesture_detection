@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from "react-router-dom";
+import { ToastContainer } from 'react-toastify';
 import './index.css';
 import ConfigureStore from './redux/configureStore'; 
 import { Provider } from 'react-redux';
@@ -13,8 +14,10 @@ root.render(
   <BrowserRouter>
     <Provider store={ConfigureStore}>
       <App />
+      <ToastContainer autoClose={500}/>
     </Provider>
   </BrowserRouter>
+  
   //</React.StrictMode>
 );
 

@@ -1,4 +1,5 @@
 import React from "react";
+import LazyLoad from 'react-lazy-load';
 // import custom_styles from './Css/GestureDetection.module.css';
 const GestureDetectionCard=({gestureData})=>{
     return (
@@ -7,7 +8,9 @@ const GestureDetectionCard=({gestureData})=>{
                 <p>{gestureData.created_at}</p>
             </div>
             <div>
-                <img src={gestureData.path!=='N/A'? `http://127.0.0.1:8000${gestureData.path}`:'https://via.placeholder.com/400'} alt={gestureData.name}/>
+            {/* <LazyLoad height={762} width={400} threshold={0.95}> */}
+                <img src={gestureData.path!=='N/A'? `${process.env.REACT_APP_SERVER_HOST_URL}${gestureData.path}`:'https://via.placeholder.com/400'} alt={gestureData.name}/>
+            {/* </LazyLoad> */}
             </div>
             {/* <div>
                 <span>{movie.Type}</span>

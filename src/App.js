@@ -4,13 +4,12 @@ import { useEffect,useState } from 'react';
 import {SIDEBAR_DATA as dummyData}  from "./data/Sidebar/Data";
 import {default as Sidebar} from "./components/Sidebar/index";
 import {DynamicItem} from "./components/Routes/[item]";
-
-import { ToastContainer, toast } from 'react-toastify';
 import GestureDetection from "./pages/GestureDetection";
 import ProtectedRoute from "./components/Routes/ProtectRoute";
 import "./App.css";
 
 function App() {
+
   // const [authenticateStatus,setAuthenticateStatus]=useState(false);
   // const VerifyToken=(token)=>{
         
@@ -76,7 +75,7 @@ function App() {
             ))}
         </Routes>
       </Sidebar>
-      <ToastContainer autoClose={500}/>
+
     </div>
   );
 }

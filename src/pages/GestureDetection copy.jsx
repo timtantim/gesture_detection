@@ -1,8 +1,7 @@
 import React from 'react'
 import { useEffect,useState } from 'react';
 import SearchIcon from '../search.svg';
-// import styles from '../Css/GestureDetection_v1.css';
-import styles from '../Css/GestureDetection_v2.css';
+import styles from '../Css/GestureDetection_v1.css';
 import {Navigate} from 'react-router-dom';
 import GestureDetectionCard from '../components/Pages/GestureDetection/GestureDetectionCard';
 import Pusher from 'pusher-js';
@@ -21,7 +20,6 @@ function GestureDetection() {
       toastId: 'gesture_detect'
     });
     const searchGestureData=async()=>{
-
     //   const token=localStorage.getItem('access_token');
       const headers = {
           // "Content-Type": "application/json",
@@ -32,17 +30,15 @@ function GestureDetection() {
           method: 'GET',
           headers:headers
       };  
-      const response=await fetch(`${process.env.REACT_APP_SERVER_API_URL}load_latest_file`,options);
+      const response=await fetch(`${process.env.REACT_APP_SERVER_API_URL}load_all_files`,options);
       const data= await response.json(); 
       const status=await response.status;
       console.log(status);
       setTokenStatus(status);
       setGesturesData(data.results);
-      // console.log(data);
     }
-    // searchGestureData();
     useEffect(()=>{
-      // searchGestureData();
+        searchGestureData();
         const pusher = new Pusher(process.env.REACT_APP_PUSHER_APP_KEY, {
                 cluster: 'ap3'
             })
@@ -51,11 +47,7 @@ function GestureDetection() {
             searchGestureData();
             //http://soundbible.com/mp3/front-desk-bells-daniel_simon.mp3
             //https://www.zapsplat.com/wp-content/uploads/2015/sound-effects-41945/zapsplat_vehicles_aircraft_call_bell_dual_tone_44562.mp3
-            // let newOrderSound = new Audio('https://www.zapsplat.com/wp-content/uploads/2015/sound-effects-41945/zapsplat_vehicles_aircraft_call_bell_dual_tone_44562.mp3');
-            // let newOrderSound = new Audio('http://soundbible.com/mp3/front-desk-bells-daniel_simon.mp3');
-            let newOrderSound = new Audio('https://www.zapsplat.com/wp-content/uploads/2015/sound-effects-69838/zapsplat_household_doorbell_chime_bell_002_73123.mp3');
-            
-
+            let newOrderSound = new Audio('https://www.zapsplat.com/wp-content/uploads/2015/sound-effects-41945/zapsplat_vehicles_aircraft_call_bell_dual_tone_44562.mp3');
             newOrderSound.play();
             notify();
             });
@@ -64,7 +56,7 @@ function GestureDetection() {
     <>
     {
       (tokenStatus=='200')?
-      <div className="gesture_v2">
+      <div className="gesture">
           <div className="app">
               <h1>Gesture Detection</h1>
               {
